@@ -1,0 +1,105 @@
+01)
+
+public class principal {
+    public static void main(String[] args) throws Exception {
+        int y = 6;
+        for (int x = 1; x < y; x++) {
+            System.out.println(x);
+        }
+    }
+}
+
+
+02)
+
+public class principal {
+    public static void main(String[] args) throws Exception {
+        int contador = 1;
+        while (contador <= 5) {
+            System.out.println(contador);
+            contador++;
+        }
+    } 
+}
+
+03)
+
+public class principal {
+    public static void main(String[] args) throws Exception {
+        int contador = 1;
+        do{
+                System.out.println(contador);
+                contador++;
+            } while (contador <= 5);
+    }
+}
+
+04)
+
+public class principal {
+    public static void main(String[] args) throws Exception {
+        int y = 15;
+        for (int x = 0; x < y; x++) {
+            if(x%2 ==0){
+                System.out.println(x);
+            }
+        }
+    }
+}
+
+05)
+
+public class principal {
+    public static void main(String[] args) throws Exception {
+        int y = 0;
+        for (int x = 0; x < 11 ; x++) {
+            y = y + x;
+            }
+        System.out.println(y);
+        }
+    }
+
+06)
+
+public class aula {
+    public static void main(String[] args) throws Exception {
+        int y = 0;
+        for (int x = 0; x < 11 ; x++) {
+            y = y + x;
+            }
+        System.out.println(y);
+        }
+    }
+
+07)
+
+import javax.swing.JOptionPane;
+
+public class aula {
+    public static void main(String[] args) throws Exception {
+        String nome = JOptionPane.showInputDialog("Digite seun nome: ");
+        if(nome != ""){
+            JOptionPane.showMessageDialog(null, "Seu nome é " + nome);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "retorne e digite seu nome");
+        }
+    }
+}
+
+08)
+
+import javax.swing.JOptionPane;
+
+public class aula {
+    public static void main(String[] args) throws Exception {
+        String x = JOptionPane.showInputDialog("Digite um número: ");
+        int y = Integer.parseInt(x);
+        if(y%2 == 0){
+            JOptionPane.showMessageDialog(null, "Seu nome é par: " + y);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "seu número é impar: " + y);
+        }
+    }
+}

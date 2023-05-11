@@ -1,0 +1,188 @@
+Nome: Vinicius Henrique 
+Professora: 
+Turma: 2°ADS
+
+Prática 2
+
+1. a)  classe: Uma classe é como um molde que se usa para criar os objetos. Nela são definidos os atributos e métodos que poderão ser populados e usados depois quando instânciado um objeto a partir dela. 
+
+b) objeto: Um objeto é uma "instância" de uma classe e possuí as características e comportamentos definidos na classe da qual de origina.
+
+c) atributos: Atributos são "as variáveis da classe" e, quando instânciado em um objeto, pode-se dar valores a esses atributos.  
+
+d) método: Os métodos podem ser vistos como "comportamentos" de um objeto.  Criando um paralelo com programação funcional, seriam como as funções de um programa. 
+
+e) abstração: Trata-se da ideia de extrair características reais para dentro do código, mimetizando comportamentos e propriedades importantes para a aplicação enquanto ignora detalhes irrelevantes.
+
+f) encapsulamento: Se refere à técnica de impedir o acesso direto a métodos, atributos, construtores, etc. afim de garantir a integridade dos dados da classe/ objeto.
+ 
+g) herança: Ato de uma classe receber métodos e atributos de uma outra, gerando assim uma "hierarquia de classes". Tal conceito ajuda a evitar repetições de códigos e simplifica o programa.
+
+
+h) polimorfismo: Se refere ao ato de, numa hierarquia de classes, guardar a referência de um "objeto filho" dentro de uma variável da "classe mãe". No polimorfismo é possível ter, por exemplo, métodos iguais(com o mesmo nome) na classe mãe e filho, mas que fazem coisas diferentes.
+
+2. 
+//classe "Aluno":
+public class Aluno {
+    private int ra;
+    private String nome;
+    private char sexo;
+    private String cpf;
+    private String rg;
+    
+    
+    Aluno (int ra, String nome, char sexo, String cpf, String rg) {
+        this.ra = ra;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.cpf = cpf;
+        this.rg = rg;
+    }
+    
+    public int getRa() {
+        return ra;
+    }
+
+    public void setRa(int ra) {
+        this.ra = ra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    public String getRg() {
+        return cpf;
+    }
+
+    public void setRg(String cpf) {
+        this.cpf = cpf;
+    }
+      
+}
+
+//classe "main"("praticaDois"):
+public class PraticaDois {
+
+    public static void main(String[] args) {
+        Aluno novoAluno = new Aluno(1234, "Gustavo", 'm', "000.000", "111.111");
+        
+        System.out.println(novoAluno.getRa());
+        System.out.println(novoAluno.getNome());
+        System.out.println(novoAluno.getSexo());
+        System.out.println(novoAluno.getRg());
+        System.out.println(novoAluno.getCpf());
+    }
+}
+
+3. 
+//classe "aluno" com adição do atributo "dataNasc":
+public class Aluno {
+    private int ra;
+    private String nome;
+    private char sexo;
+    private String cpf;
+    private String rg;
+    Data dataNasc;
+    
+    Aluno (int ra, String nome, char sexo, String cpf, String rg) {
+        this.ra = ra;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.cpf = cpf;
+        this.rg = rg;
+        
+    }
+    
+    public Data getDataNasc() {
+        return this.dataNasc = dataNasc;
+        
+    }
+    
+    public int getRa() {
+        return this.ra = ra;
+    }
+    
+    public void setRa(int ra) {
+        this.ra = ra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    public String getRg() {
+        return cpf;
+    }
+
+    public void setRg(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    public void imprimir() {
+        System.out.println(this.getRa());
+        System.out.println(this.getNome());
+        System.out.println(this.getSexo());
+        System.out.println(this.getRg());
+        System.out.println(this.getCpf());
+        System.out.println(this.getDataNasc());
+        
+    }
+}
+
+//classe "Data":
+public class Data {
+    private int dia;
+    private int mes;
+    private int ano;
+    
+    Data (int dia, int mes, int ano) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+        
+    }
+    public String formatarData() {
+        return dia+"/"+mes+"/"+ano;
+    }
+}
